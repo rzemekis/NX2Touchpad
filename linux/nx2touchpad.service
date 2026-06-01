@@ -1,0 +1,12 @@
+[Unit]
+Description=NX2Touchpad Virtual Touchpad Daemon
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/nx2touchpad/nx2touchpad.py
+Restart=on-failure
+User=root
+
+[Install]
+WantedBy=multi-user.target
