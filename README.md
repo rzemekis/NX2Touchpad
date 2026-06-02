@@ -23,7 +23,10 @@ To bypass strict Wayland/libinput touchpad rules, the Linux daemon emulates a st
    *(Example for iptables: `sudo iptables -I INPUT 1 -p udp --dport 28275 -j ACCEPT`)*
 4. Run the daemon:
    ```bash
-   sudo python3 nx2touchpad.py
+   python -m venv venv
+   source venv/bin/activate
+   pip install -r requirements.txt
+   python nx2touchpad.py
    ```
 
 ---
